@@ -54,7 +54,7 @@ void Game::play()
 		symbol = players[n]->getSymbol();
 
 		// choose valid position and check if the position is empty
-		if ((x > 0 && x <= 3) && (y > 0 && y <= 3) && (board->getPosition(y - 1, x - 1) == ' '))
+		if ((x >= 1 && x <= 3) && (y >= 1 && y <= 3) && (board->getPosition(y - 1, x - 1) == ' '))
 		{
 			board->addSymbol(y - 1, x - 1, symbol); // let player add a symbol to board
 
