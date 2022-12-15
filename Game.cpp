@@ -61,8 +61,6 @@ void Game::play()
 			// check if the player has won
 			playerHasWon = board->check(symbol);
 
-			board->display();
-
 			// update number of turns
 			numberOfTurns++;
 
@@ -74,6 +72,8 @@ void Game::play()
 			std::cout << "\nInvalid position...\n\n";
 			Sleep(500);
 		}
+
+		board->display();
 
 	} while ((numberOfTurns < 9) && !playerHasWon); // keep playing until board is filled or if a player has won
 
