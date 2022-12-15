@@ -19,7 +19,7 @@ private:
 inline void Game::result(bool win, int player)
 {
 	if (win)
-		std::cout << "\nPlayer " << (player + 1) << " has won!\n";
+		std::cout << "\nPlayer " << (((player + 1) % 2) + 1) << " has won!\n";
 	else
 		std::cout << "\nIt's a draw!\n";
 }
